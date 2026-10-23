@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -778,5 +777,135 @@ footer p {
     animation: none !important;
     scroll-behavior: auto !important;
     transition: none !important;
+  }
+}
+
+#projects {
+  position: relative;
+}
+
+#projects .section-text {
+  max-width: 750px;
+}
+
+/* Project cards */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100%;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24, 40, 19, 0.96),
+      rgba(10, 12, 10, 0.97)
+    );
+  border: 1px solid rgba(156, 255, 50, 0.22);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--green);
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.4),
+    0 0 18px rgba(156, 255, 50, 0.08);
+}
+
+/* Project icon */
+.project-icon {
+  display: grid;
+  place-items: center;
+  width: 65px;
+  height: 65px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(156, 255, 50, 0.3);
+  border-radius: 12px;
+  background: rgba(156, 255, 50, 0.08);
+  font-size: 2rem;
+  transition: 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+  background: rgba(156, 255, 50, 0.16);
+  box-shadow: 0 0 20px rgba(156, 255, 50, 0.12);
+  transform: scale(1.05);
+}
+
+/* Project category */
+.project-card .tag {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+/* Project title */
+.project-card h3 {
+  font-size: 1.55rem;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+/* Project description */
+.project-card p:not(.tag):not(.skill-tags) {
+  line-height: 1.8;
+}
+
+/* Technologies used */
+.project-card .skill-tags {
+  padding-top: 12px;
+  margin-top: auto;
+  margin-bottom: 12px;
+  color: var(--green) !important;
+  font-size: 0.75rem !important;
+  line-height: 1.8;
+}
+
+/* Project status */
+.project-status {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: 1px solid rgba(156, 255, 50, 0.25);
+  border-radius: 5px;
+  background: rgba(156, 255, 50, 0.06);
+  color: var(--green);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Project links */
+.project-card .text-link {
+  margin-top: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+.project-card .text-link:hover {
+  color: white;
+  border-bottom-color: var(--green);
+}
+
+/* Mobile adjustments */
+@media (max-width: 760px) {
+  #projects .grid {
+    gap: 18px;
+  }
+
+  .project-card {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .project-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 1.8rem;
   }
 }
